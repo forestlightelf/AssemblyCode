@@ -174,8 +174,9 @@ s2:
 
     ret
 show_input_string:
-;参数：bx存放字符串基址
+;参数：dx存放字符串基址
 ;功能：显示用户输入的字符串
+    mov bx,dx
 	lea dx,_enter
 	call print_const_string
 	
